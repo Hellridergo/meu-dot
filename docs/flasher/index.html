@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meu Dot · Web installer</title>
+<meta name="description" content="Install the Meu Dot firmware on a Waveshare ESP32-S3-Touch-AMOLED-1.75C from your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/esp-web-tools@10.0.1/dist/web/install-button.js?module"></script>
+<style>
+  :root {
+    --bg: #090807; --surface: #15120f; --surface-2: #1c1814; --line: #2a241e;
+    --ink: #fff5e8; --muted: #a69a8c; --amber: #f99d22; --amber-2: #ffc266;
+    --green: #7fdca4; --coral: #ff7b5e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; font-family: Inter, system-ui, sans-serif;
+    color: var(--ink); line-height: 1.55;
+    background: radial-gradient(60rem 40rem at 78% -10%, rgba(249,157,34,.18), transparent 60%), var(--bg);
+  }
+  main { max-width: 60rem; margin: 0 auto; padding: 3.5rem 1.25rem 4rem; }
+  .brand { display: flex; align-items: center; gap: .6rem; color: var(--amber); font-weight: 700; letter-spacing: .08em; font-size: .8rem; }
+  .brand i { width: .75rem; height: .75rem; border-radius: 50%; background: var(--amber); box-shadow: 0 0 18px var(--amber); }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.2rem); line-height: 1.05; margin: 1rem 0 .75rem; letter-spacing: -.02em; }
+  .lead { color: var(--muted); max-width: 38rem; margin: 0 0 2.25rem; }
+  .lang { display: flex; gap: .4rem; margin-bottom: 1.5rem; }
+  .lang button { background: var(--surface); color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: .35rem .9rem; font: inherit; font-size: .85rem; cursor: pointer; }
+  .lang button[aria-pressed="true"] { color: var(--bg); background: var(--amber); border-color: var(--amber); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 1.25rem; padding: 1.5rem; }
+  .card h2 { margin: 0 0 .35rem; font-size: 1.2rem; }
+  .card p { margin: 0 0 1.25rem; color: var(--muted); font-size: .95rem; }
+  .tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; border-radius: 999px; padding: .15rem .55rem; margin-bottom: .7rem; }
+  .tag.first { color: var(--coral); border: 1px solid rgba(255,123,94,.4); }
+  .tag.keep { color: var(--green); border: 1px solid rgba(127,220,164,.4); }
+  .btn { display: inline-flex; align-items: center; gap: .5rem; background: linear-gradient(180deg, var(--amber-2), var(--amber)); color: #1a1208; font: inherit; font-weight: 700; border: 0; border-radius: 999px; padding: .8rem 1.4rem; cursor: pointer; box-shadow: 0 10px 30px -10px rgba(249,157,34,.7); }
+  .btn:focus-visible, .lang button:focus-visible, a:focus-visible { outline: 2px solid var(--amber-2); outline-offset: 3px; }
+  ol { color: var(--muted); padding-left: 1.2rem; }
+  ol li { margin: .35rem 0; }
+  .note { margin-top: 2rem; background: var(--surface-2); border: 1px solid var(--line); border-radius: 1rem; padding: 1rem 1.25rem; color: var(--muted); font-size: .92rem; }
+  a { color: var(--amber-2); }
+  code { background: var(--surface-2); padding: .1rem .35rem; border-radius: .35rem; font-size: .88em; color: var(--ink); }
+  [data-lang="pt"] { display: none; }
+  body.pt [data-lang="pt"] { display: revert; }
+  body.pt [data-lang="en"] { display: none; }
+  .unsupported { color: var(--coral); font-weight: 500; }
+  footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand"><i></i>MEU DOT · 0.5.4</div>
+  <h1 data-lang="en">Install from your browser</h1>
+  <h1 data-lang="pt">Instale pelo navegador</h1>
+  <p class="lead" data-lang="en">Connect the Waveshare ESP32-S3-Touch-AMOLED-1.75C with a USB-C data cable and use Chrome or Edge on a computer. Nothing to install.</p>
+  <p class="lead" data-lang="pt">Ligue a Waveshare ESP32-S3-Touch-AMOLED-1.75C com um cabo USB-C de dados e use o Chrome ou o Edge num computador. Não é preciso instalar nada.</p>
+
+  <div class="lang" role="group" aria-label="Language · Idioma">
+    <button type="button" id="en" aria-pressed="true">English</button>
+    <button type="button" id="pt" aria-pressed="false">Português</button>
+  </div>
+
+  <div class="grid">
+    <section class="card">
+      <span class="tag first" data-lang="en">First install · erases the board</span>
+      <span class="tag first" data-lang="pt">Primeira instalação · apaga a placa</span>
+      <h2 data-lang="en">Install Meu Dot</h2>
+      <h2 data-lang="pt">Instalar o Meu Dot</h2>
+      <p data-lang="en">Writes the complete image: bootloader, partition table and app. Pairing and settings start from scratch.</p>
+      <p data-lang="pt">Grava a imagem completa: bootloader, tabela de partições e app. Pareamento e ajustes começam do zero.</p>
+      <esp-web-install-button manifest="manifest.json">
+        <button slot="activate" class="btn"><span data-lang="en">Install Meu Dot</span><span data-lang="pt">Instalar o Meu Dot</span></button>
+        <span slot="unsupported" class="unsupported"><span data-lang="en">This browser has no Web Serial. Use Chrome or Edge on a computer.</span><span data-lang="pt">Este navegador não tem Web Serial. Use o Chrome ou o Edge num computador.</span></span>
+        <span slot="not-allowed" class="unsupported"><span data-lang="en">Open this page over HTTPS.</span><span data-lang="pt">Abra esta página por HTTPS.</span></span>
+      </esp-web-install-button>
+    </section>
+
+    <section class="card">
+      <span class="tag keep" data-lang="en">Update · keeps pairing</span>
+      <span class="tag keep" data-lang="pt">Atualização · mantém o pareamento</span>
+      <h2 data-lang="en">Update an installed board</h2>
+      <h2 data-lang="pt">Atualizar uma placa instalada</h2>
+      <p data-lang="en">Writes only the app at <code>0x10000</code>. Pairing, volume, brightness and shortcuts are kept.</p>
+      <p data-lang="pt">Grava só o app em <code>0x10000</code>. Pareamento, volume, brilho e atalhos continuam.</p>
+      <esp-web-install-button manifest="manifest-update.json">
+        <button slot="activate" class="btn"><span data-lang="en">Update firmware</span><span data-lang="pt">Atualizar firmware</span></button>
+        <span slot="unsupported" class="unsupported"><span data-lang="en">This browser has no Web Serial. Use Chrome or Edge on a computer.</span><span data-lang="pt">Este navegador não tem Web Serial. Use o Chrome ou o Edge num computador.</span></span>
+        <span slot="not-allowed" class="unsupported"><span data-lang="en">Open this page over HTTPS.</span><span data-lang="pt">Abra esta página por HTTPS.</span></span>
+      </esp-web-install-button>
+    </section>
+  </div>
+
+  <div class="note" data-lang="en">
+    <ol>
+      <li>Click a button and pick the port, usually <code>USB JTAG/serial debug unit</code>.</li>
+      <li>No port? Unplug the board, hold <b>BOOT</b>, plug it back in and release BOOT.</li>
+      <li>Wait about a minute. The board restarts with the amber Dot.</li>
+    </ol>
+    Prefer the command line? See the <a href="https://github.com/Hellridergo/meu-dot/blob/main/docs/en/getting-started.md#2-install-the-firmware-on-the-board">getting started guide</a>.
+  </div>
+  <div class="note" data-lang="pt">
+    <ol>
+      <li>Clique num botão e escolha a porta, normalmente <code>USB JTAG/serial debug unit</code>.</li>
+      <li>Nenhuma porta? Desligue a placa do cabo, segure o <b>BOOT</b>, ligue o cabo de novo e solte o BOOT.</li>
+      <li>Espere cerca de um minuto. A placa reinicia com o Dot âmbar.</li>
+    </ol>
+    Prefere a linha de comando? Veja os <a href="https://github.com/Hellridergo/meu-dot/blob/main/docs/pt-BR/primeiros-passos.md#2-grave-o-firmware-na-placa">primeiros passos</a>.
+  </div>
+
+  <footer>
+    <a href="https://github.com/Hellridergo/meu-dot">github.com/Hellridergo/meu-dot</a> ·
+    <span data-lang="en">Independent project, not affiliated with OpenAI or Waveshare.</span>
+    <span data-lang="pt">Projeto independente, sem vínculo com a OpenAI ou a Waveshare.</span>
+  </footer>
+</main>
+<script>
+  const set = (pt) => {
+    document.body.classList.toggle('pt', pt);
+    document.documentElement.lang = pt ? 'pt-BR' : 'en';
+    document.getElementById('pt').setAttribute('aria-pressed', pt);
+    document.getElementById('en').setAttribute('aria-pressed', !pt);
+    try { localStorage.setItem('meu-dot-lang', pt ? 'pt' : 'en'); } catch (e) {}
+  };
+  let saved = null;
+  try { saved = localStorage.getItem('meu-dot-lang'); } catch (e) {}
+  set(saved ? saved === 'pt' : (navigator.language || '').toLowerCase().startsWith('pt'));
+  document.getElementById('en').onclick = () => set(false);
+  document.getElementById('pt').onclick = () => set(true);
+</script>
+</body>
+</html>

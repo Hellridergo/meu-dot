@@ -1,0 +1,28 @@
+# Build output
+firmware/build/
+firmware/managed_components/
+firmware/sdkconfig.old
+bridge/node_modules/
+bridge/.next/
+bridge/.vinext/
+bridge/dist/
+bridge/.wrangler/
+bridge/.sites-runtime/
+bridge/.openai/hosting.json
+*.pyc
+__pycache__/
+
+# Secrets: never commit signing keys or environment files
+*.p12
+*.jks
+*.keystore
+*.pem
+.env*
+.dev.vars*
+
+# Release binaries go to GitHub Releases (the web installer keeps its own copy in docs/flasher)
+*.apk
+*.bin
+!docs/flasher/*.bin
+
+.DS_Store

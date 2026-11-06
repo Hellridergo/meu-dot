@@ -1,0 +1,7 @@
+# Character art license · Licença da arte do personagem
+
+**English.** The Meu Dot character — `personagem.png`, `personagem-azul.png`, `quadros-ambar.png`, `quadros-azuis.png` and the frames generated from them in `interface/art_data.inc` and `android/assets/personagem.png` — is © 2026 Leo Candido and licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You may use it in your own builds of Meu Dot and adapt it with credit, but not sell it or products featuring it. The source code of the project stays under the MIT License.
+
+**Português.** O personagem do Meu Dot — `personagem.png`, `personagem-azul.png`, `quadros-ambar.png`, `quadros-azuis.png` e os quadros gerados a partir deles em `interface/art_data.inc` e `android/assets/personagem.png` — é © 2026 Leo Candido e está sob a licença [Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR). Você pode usá-lo nas suas próprias montagens do Meu Dot e adaptá-lo dando crédito, mas não vendê-lo nem vender produtos que o usem. O código-fonte do projeto continua sob a licença MIT.
+
+The Inter typeface (`InterVariable.ttf`) is licensed separately under the SIL Open Font License 1.1, in `Inter-OFL.txt`. · A fonte Inter (`InterVariable.ttf`) tem licença própria, SIL Open Font License 1.1, em `Inter-OFL.txt`.

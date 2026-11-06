@@ -1,0 +1,5 @@
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+<background android:drawable="@drawable/bolso_fundo"/>
+<foreground android:drawable="@drawable/bolso_frente"/>
+<monochrome android:drawable="@drawable/bolso_mono"/>
+</adaptive-icon>

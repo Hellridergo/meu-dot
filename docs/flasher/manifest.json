@@ -1,0 +1,16 @@
+{
+  "name": "Meu Dot",
+  "version": "0.5.4",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "meu-dot-waveshare-0.5.4-full.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}

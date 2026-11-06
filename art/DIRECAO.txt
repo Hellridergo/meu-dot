@@ -1,0 +1,14 @@
+Dot âmbar • direção visual "Lume" para o visor da Waveshare e o app
+O Dot é a fonte de luz da interface: preto verdadeiro no AMOLED, um halo quente atrás do personagem e o âmbar de referência #F99D22 como única cor de destaque. Verde (#7FDCA4) indica só conexão e coral (#FF7B5E) só falha. Neutros levemente quentes: texto #FFF5E8, apoio #A69A8C, superfícies #15120F e #1C1814, contornos #2A241E.
+
+Quadros-ambar é um atlas RGBA de 9 colunas × 3 linhas. Cada pose mede 192 × 170 px. Em ordem de leitura:
+00–08 — piscar, fechando até 04 e reabrindo.
+09–17 — escutar, olhar para a esquerda, acompanhar para cima e à direita, voltar ao centro.
+18–26 — falar, da boca em repouso à abertura máxima. A aplicação escolhe a pose conforme o volume instantâneo da voz.
+personagem.png reúne quatro poses em resolução maior (neutra, olhar, olhos fechados, fala). O app Android usa essa folha.
+
+O personagem deriva da referência original do usuário. As três folhas de nove quadros foram produzidas pela ferramenta incorporada de geração de imagens. A primeira usou a pelúcia original como referência e tomou como base o mesmo corpo triangular, óculos redondos pretos, pupilas brilhantes e gravata-borboleta de feltro preto. A pelúcia recebeu o azul cerúleo (#1886e4). As outras duas folhas usaram a primeira como referência de cor, material e identidade. A montagem final registra os aros dos óculos e aproveita as áreas animadas de cada render, mantendo base, escala e pelagem estáveis durante as transições.
+
+quadros-azuis.png e personagem-azul.png guardam essa arte azul sem alteração. tools/ambar.py gera as versões âmbar: troca só a pelagem, em OKLab, medindo a luminosidade de cada pelo contra o azul mediano e reaplicando-a sobre #F99D22, com sombras um pouco mais quentes e brilhos um pouco mais dourados. Óculos, gravata, olhos, boca e transparência ficam como no original. A mediana medida da pelagem âmbar é 250, 156, 36.
+
+No firmware, tools/recursos.py converte cada pose em RGB565 pré-multiplicado (composto sobre preto) mais uma máscara de 4 bits, para o Dot aparecer com transparência real sobre o halo. No tamanho principal ele é desenhado 1:1; nos menores, com filtro bilinear. A fonte Inter é distribuída com sua licença SIL OFL na mesma pasta.

@@ -1,0 +1,17 @@
+<resources>
+<style name="MeuDotTheme" parent="android:style/Theme.Material.NoActionBar">
+<item name="android:fontFamily">sans</item><item name="android:colorAccent">#F99D22</item>
+<item name="android:colorControlActivated">#F99D22</item><item name="android:colorControlNormal">#6E645A</item>
+<item name="android:colorControlHighlight">#29F99D22</item><item name="android:colorEdgeEffect">#F99D22</item>
+<item name="android:windowBackground">#0A0908</item><item name="android:colorBackground">#0A0908</item>
+<item name="android:textColorPrimary">#FFF5E8</item><item name="android:textColorSecondary">#A69A8C</item>
+<item name="android:textColorHint">#6E645A</item><item name="android:textColorHighlight">#66F99D22</item>
+<item name="android:statusBarColor">#0A0908</item><item name="android:navigationBarColor">#0A0908</item>
+<item name="android:windowLightStatusBar">false</item><item name="android:windowLightNavigationBar">false</item>
+<item name="android:alertDialogTheme">@style/MeuDotDialog</item>
+</style>
+<style name="MeuDotDialog" parent="android:style/Theme.Material.Dialog.Alert">
+<item name="android:colorAccent">#F99D22</item><item name="android:colorBackground">#1C1814</item>
+<item name="android:textColorPrimary">#FFF5E8</item><item name="android:textColorSecondary">#A69A8C</item>
+</style>
+</resources>

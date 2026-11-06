@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meu Dot</title>
+<meta name="description" content="A pocket companion for your ChatGPT Dot: a round AMOLED ESP32-S3 board, an Android app and a bridge on ChatGPT Sites.">
+<meta property="og:image" content="img/banner.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#090807; --surface:#15120f; --line:#2a241e; --ink:#fff5e8; --muted:#a69a8c; --amber:#f99d22; --amber-2:#ffc266; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:Inter, system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.55; }
+  main { max-width:64rem; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+  img.hero { width:100%; height:auto; border-radius:1.25rem; border:1px solid var(--line); display:block; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:1rem; margin-top:1.5rem; }
+  a.card { display:block; text-decoration:none; color:inherit; background:var(--surface); border:1px solid var(--line); border-radius:1.1rem; padding:1.25rem 1.35rem; transition:border-color .15s; }
+  a.card:hover, a.card:focus-visible { border-color:var(--amber); outline:none; }
+  a.card b { display:block; font-size:1.05rem; margin-bottom:.25rem; }
+  a.card span { color:var(--muted); font-size:.92rem; }
+  footer { margin-top:2.5rem; color:var(--muted); font-size:.85rem; }
+  footer a { color:var(--amber-2); }
+</style>
+</head>
+<body>
+<main>
+  <img class="hero" src="img/banner.png" alt="Meu Dot — your Dot, in your pocket · seu Dot no bolso">
+  <div class="grid">
+    <a class="card" href="flasher/"><b>Web installer · Instalador</b><span>Flash the board from Chrome or Edge. · Grave a placa pelo Chrome ou Edge.</span></a>
+    <a class="card" href="simulator/"><b>Simulator · Simulador</b><span>Try the round screen in your browser. · Experimente a tela redonda no navegador.</span></a>
+    <a class="card" href="https://github.com/Hellridergo/meu-dot/blob/main/docs/en/getting-started.md"><b>Getting started</b><span>Step-by-step guide in English.</span></a>
+    <a class="card" href="https://github.com/Hellridergo/meu-dot/blob/main/docs/pt-BR/primeiros-passos.md"><b>Primeiros passos</b><span>Guia passo a passo em português.</span></a>
+  </div>
+  <footer><a href="https://github.com/Hellridergo/meu-dot">github.com/Hellridergo/meu-dot</a> · Independent project, not affiliated with OpenAI or Waveshare. · Projeto independente, sem vínculo com a OpenAI ou a Waveshare.</footer>
+</main>
+</body>
+</html>

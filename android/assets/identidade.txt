@@ -1,0 +1,4 @@
+Meu Dot
+Personagem: art/personagem.png, o Dot âmbar (#F99D22) gerado por tools/ambar.py
+a partir da arte azul original do projeto (art/personagem-azul.png). Só a pelagem muda.
+Fonte: InterVariable.ttf, licença Inter-OFL.txt.
