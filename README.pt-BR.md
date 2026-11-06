@@ -8,6 +8,7 @@
   <img alt="Android" src="https://img.shields.io/badge/Android-12%2B%20ARM64-1C1814">
   <img alt="ESP-IDF" src="https://img.shields.io/badge/ESP--IDF-5.5.5-1C1814">
   <a href="LICENSE"><img alt="Licença" src="https://img.shields.io/badge/c%C3%B3digo-MIT-1C1814"></a>
+  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="LinkedIn" src="https://img.shields.io/badge/by-Leo%20Candido-0A66C2?logo=linkedin&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -123,6 +124,15 @@ Você também pode experimentar a tela redonda no navegador, com o [simulador in
 - [ ] Motor de vibração opcional para novas respostas. O firmware está pronto; falta um pequeno circuito com transistor.
 - [ ] Uma ponte que rode fora do ChatGPT Sites.
 - [ ] Integração contínua que compile o firmware e o APK a cada versão.
+
+## Autor
+
+O Meu Dot é um projeto de **Leo Candido**. Se você montar o seu, compartilhe: vou adorar ver.
+
+<p>
+  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Leo%20Candido-0A66C2?logo=linkedin&logoColor=white"></a>
+  <a href="https://github.com/Hellridergo"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Hellridergo-1C1814?logo=github&logoColor=white"></a>
+</p>
 
 ## Créditos
 

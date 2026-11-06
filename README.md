@@ -8,6 +8,7 @@
   <img alt="Android" src="https://img.shields.io/badge/Android-12%2B%20ARM64-1C1814">
   <img alt="ESP-IDF" src="https://img.shields.io/badge/ESP--IDF-5.5.5-1C1814">
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/code-MIT-1C1814"></a>
+  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="LinkedIn" src="https://img.shields.io/badge/by-Leo%20Candido-0A66C2?logo=linkedin&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -117,6 +118,15 @@ You can also try the round screen in the browser with the [interactive simulator
 - [ ] Optional vibration motor for new replies. The firmware is ready; it needs a small transistor circuit.
 - [ ] A bridge that can be self-hosted outside ChatGPT Sites.
 - [ ] Continuous integration that builds the firmware and APK on every release.
+
+## Author
+
+Meu Dot is a project by **Leo Candido**. If you build your own, share it: I'd love to see it.
+
+<p>
+  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Leo%20Candido-0A66C2?logo=linkedin&logoColor=white"></a>
+  <a href="https://github.com/Hellridergo"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Hellridergo-1C1814?logo=github&logoColor=white"></a>
+</p>
 
 ## Credits
 
