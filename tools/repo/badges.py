@@ -1,9 +1,9 @@
-"""Saves the README's static badges to docs/img/badges/ as SVG files.
+"""Saves the README badges to docs/img/badges/ as SVG files.
 
 GitHub proxies external README images through its camo cache, which sometimes
 times out on shields.io and shows a broken image. Keeping the static badges in
-the repository avoids that. Only the release badge stays live, so it can follow
-new versions.
+the repository avoids that. The version badges are a snapshot of the latest
+release, so run this script again after publishing a new one.
 
 Usage: python tools/repo/badges.py   (needs network access to img.shields.io)"""
 import base64
@@ -37,15 +37,26 @@ BADGES = {
     'github.svg': ('GitHub', 'Hellridergo', DARK, {'logo': 'github', 'logoColor': 'white'}),
 }
 
+# The version badges read the latest GitHub release. Run this again after each
+# release so they show the new version.
+RELEASE = 'https://img.shields.io/github/v/release/Hellridergo/meu-dot?color=F99D22&label='
+LIVE = {
+    'release.svg': RELEASE + 'release',
+    'versao.svg': RELEASE + 'vers%C3%A3o',
+}
+
 def part(text):
     # shields.io static badge escaping: "-" becomes "--", "_" becomes "__".
     return urllib.parse.quote(text.replace('-', '--').replace('_', '__'), safe='')
 
-out.mkdir(parents=True, exist_ok=True)
+urls = dict(LIVE)
 for name, (label, message, color, extra) in BADGES.items():
-    url = f'https://img.shields.io/badge/{part(label)}-{part(message)}-{color}'
+    urls[name] = f'https://img.shields.io/badge/{part(label)}-{part(message)}-{color}'
     if extra:
-        url += '?' + urllib.parse.urlencode(extra)
+        urls[name] += '?' + urllib.parse.urlencode(extra)
+
+out.mkdir(parents=True, exist_ok=True)
+for name, url in urls.items():
     req = urllib.request.Request(url, headers={'User-Agent': 'meu-dot-badges'})
     with urllib.request.urlopen(req, timeout=20) as r:
         svg = r.read()

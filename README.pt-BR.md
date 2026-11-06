@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Hellridergo/meu-dot/releases/latest"><img alt="Última versão" src="https://img.shields.io/github/v/release/Hellridergo/meu-dot?color=F99D22&label=vers%C3%A3o"></a>
+  <a href="https://github.com/Hellridergo/meu-dot/releases/latest"><img alt="Última versão: v0.5.4" src="docs/img/badges/versao.svg"></a>
   <img alt="Placa: ESP32-S3 AMOLED 1.75&quot;" src="docs/img/badges/placa.svg">
   <img alt="Android 12+ ARM64" src="docs/img/badges/android.svg">
   <img alt="ESP-IDF 5.5.5" src="docs/img/badges/esp-idf.svg">
