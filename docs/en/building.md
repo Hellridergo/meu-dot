@@ -83,7 +83,8 @@ bash tools/previa.sh docs/simulator/index.html   # needs clang (wasm32) and wasm
 ```sh
 python tools/ambar.py      # blue originals → art/quadros-ambar.png and art/personagem.png
 python tools/recursos.py   # art → interface/art_data.inc (RGB565 + 4-bit mask, fonts)
-python tools/repo/banner.py
+python tools/repo/banner.py   # README covers, English and Portuguese
+python tools/repo/badges.py   # static README badges in docs/img/badges
 ```
 
 ## Tests

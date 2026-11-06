@@ -87,7 +87,8 @@ bash tools/previa.sh docs/simulator/index.html   # precisa do clang (wasm32) e d
 ```sh
 python tools/ambar.py      # originais azuis → art/quadros-ambar.png e art/personagem.png
 python tools/recursos.py   # arte → interface/art_data.inc (RGB565 + máscara de 4 bits, fontes)
-python tools/repo/banner.py
+python tools/repo/banner.py   # capas do README, em inglês e português
+python tools/repo/badges.py   # selos fixos do README em docs/img/badges
 ```
 
 ## Testes

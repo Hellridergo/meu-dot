@@ -1,21 +1,21 @@
 <p align="center">
-  <img src="docs/img/banner.png" alt="Meu Dot — seu Dot no bolso" width="100%">
+  <img src="docs/img/banner.pt-BR.png" alt="Meu Dot — um Dot que roda na palma da sua mão" width="100%">
 </p>
 
 <p align="center">
   <a href="https://github.com/Hellridergo/meu-dot/releases/latest"><img alt="Última versão" src="https://img.shields.io/github/v/release/Hellridergo/meu-dot?color=F99D22&label=vers%C3%A3o"></a>
-  <img alt="Placa" src="https://img.shields.io/badge/placa-ESP32--S3%20AMOLED%201.75%22-1C1814">
-  <img alt="Android" src="https://img.shields.io/badge/Android-12%2B%20ARM64-1C1814">
-  <img alt="ESP-IDF" src="https://img.shields.io/badge/ESP--IDF-5.5.5-1C1814">
-  <a href="LICENSE"><img alt="Licença" src="https://img.shields.io/badge/c%C3%B3digo-MIT-1C1814"></a>
-  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="LinkedIn" src="https://img.shields.io/badge/by-Leo%20Candido-0A66C2?logo=linkedin&logoColor=white"></a>
+  <img alt="Placa: ESP32-S3 AMOLED 1.75&quot;" src="docs/img/badges/placa.svg">
+  <img alt="Android 12+ ARM64" src="docs/img/badges/android.svg">
+  <img alt="ESP-IDF 5.5.5" src="docs/img/badges/esp-idf.svg">
+  <a href="LICENSE"><img alt="Licença: MIT" src="docs/img/badges/codigo-mit.svg"></a>
+  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="Por Leo Candido, no LinkedIn" src="docs/img/badges/por-leo-candido.svg"></a>
 </p>
 
 <p align="center">
   <a href="README.md">English</a> · <b>Português</b>
 </p>
 
-O **Meu Dot** transforma uma placa com tela AMOLED redonda num companheiro de bolso para o seu **Dot do ChatGPT**. Você segura o personagem, fala e solta. A voz vai pelo Bluetooth até o celular, vira texto e chega à conversa do seu Dot como um evento. A resposta volta como um cartão na tela redonda e é lida em voz alta pelo alto-falante da placa, enquanto a boca do personagem acompanha a voz.
+O **Meu Dot** transforma uma placa com tela AMOLED redonda num companheiro para o seu **Dot do ChatGPT** que roda na palma da sua mão. Você segura o personagem, fala e solta. A voz vai pelo Bluetooth até o celular, vira texto e chega à conversa do seu Dot como um evento. A resposta volta como um cartão na tela redonda e é lida em voz alta pelo alto-falante da placa, enquanto a boca do personagem acompanha a voz.
 
 > [!NOTE]
 > O Meu Dot é um projeto pessoal e independente, sem vínculo, endosso ou patrocínio da OpenAI ou da Waveshare. "ChatGPT" e "Dot" se referem aos serviços da OpenAI aos quais o projeto se conecta.
@@ -30,7 +30,7 @@ O **Meu Dot** transforma uma placa com tela AMOLED redonda num companheiro de bo
 - **Ida e volta rápidas.** A fala vai para o celular enquanto você ainda está falando. Por isso, a gravação inteira chega cerca de 15 ms depois de soltar. Depois que o Dot responde, a voz começa em menos de 1 segundo.
 - **Respostas e decisões.** Respostas longas aparecem em páginas. Quando o Dot pede uma decisão, a tela mostra os botões Confirmar e Recusar, e sua escolha volta para a mesma conversa.
 - **Personagem que reage.** O Dot âmbar tem 27 quadros de piscada, olhar e fala. A boca segue o volume da voz da resposta.
-- **Feito para o bolso.**
+- **Feito para levar com você.**
   - A tela escurece aos 15 s, bloqueia aos 30 s e desbloqueia com um deslizar para cima.
   - Um toque curto no PWR apaga a tela, e segurar o PWR por 3 s desliga a placa.
   - A tela mostra a bateria e o carregamento.
@@ -130,8 +130,8 @@ Você também pode experimentar a tela redonda no navegador, com o [simulador in
 O Meu Dot é um projeto de **Leo Candido**. Se você montar o seu, compartilhe: vou adorar ver.
 
 <p>
-  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Leo%20Candido-0A66C2?logo=linkedin&logoColor=white"></a>
-  <a href="https://github.com/Hellridergo"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Hellridergo-1C1814?logo=github&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="Leo Candido no LinkedIn" src="docs/img/badges/linkedin.svg"></a>
+  <a href="https://github.com/Hellridergo"><img alt="Hellridergo no GitHub" src="docs/img/badges/github.svg"></a>
 </p>
 
 ## Créditos

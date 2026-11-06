@@ -1,4 +1,5 @@
-"""Renders docs/img/banner.png (1280x640, also the GitHub social preview).
+"""Renders docs/img/banner.png (English) and docs/img/banner.pt-BR.png (Portuguese),
+1280x640, also usable as the GitHub social preview.
 Usage: python tools/repo/banner.py   (needs Pillow)"""
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -32,19 +33,31 @@ def font(size, weight):
     f = ImageFont.truetype(str(root / 'art/InterVariable.ttf'), size)
     f.set_variation_by_axes([min(32, max(14, size)), weight])
     return f
-dr = ImageDraw.Draw(bg)
-x = 88
-dr.ellipse((x, 152, x + 16, 168), fill=AMBER)
-dr.text((x + 28, 146), 'MEU DOT', font=font(20, 700), fill=AMBER)
-dr.text((x - 4, 186), 'Your Dot,', font=font(76, 680), fill=INK)
-dr.text((x - 4, 270), 'in your pocket.', font=font(76, 680), fill=INK)
-dr.text((x, 384), 'Talk to your ChatGPT Dot from a round AMOLED', font=font(25, 420), fill=MUTED)
-dr.text((x, 418), 'gadget. Converse com seu Dot pelo bolso.', font=font(25, 420), fill=MUTED)
-px, y = x, 482
-for chip in ['ESP32-S3 AMOLED 1.75"', 'Android', 'ChatGPT Sites + MCP']:
-    ft = font(18, 560)
-    tw = dr.textlength(chip, font=ft)
-    dr.rounded_rectangle((px, y, px + tw + 32, y + 40), radius=20, outline=(62, 53, 44), width=2, fill=(21, 18, 15))
-    dr.text((px + 16, y + 10), chip, font=ft, fill=INK)
-    px += tw + 44
-bg.save(root / 'docs/img/banner.png', optimize=True)
+COPY = {
+    'banner.png': (['A Dot that runs', 'in the palm', 'of your hand.'],
+                   ['Talk to your ChatGPT Dot', 'on a round 1.75" AMOLED screen.']),
+    'banner.pt-BR.png': (['Um Dot que roda', 'na palma', 'da sua mão.'],
+                         ['Converse com o seu Dot do ChatGPT', 'numa tela AMOLED redonda de 1,75".']),
+}
+base = bg
+for name, (title, sub) in COPY.items():
+    bg = base.copy()
+    dr = ImageDraw.Draw(bg)
+    x = 88
+    dr.ellipse((x, 106, x + 16, 122), fill=AMBER)
+    dr.text((x + 28, 100), 'MEU DOT', font=font(20, 700), fill=AMBER)
+    for i, line in enumerate(title):
+        dr.text((x - 4, 136 + i * 76), line, font=font(68, 680), fill=INK)
+    for i, line in enumerate(sub):
+        dr.text((x, 398 + i * 34), line, font=font(25, 420), fill=MUTED)
+    px, y = x, 502
+    for chip in ['ESP32-S3 AMOLED 1.75"', 'Android', 'ChatGPT Sites + MCP']:
+        ft = font(18, 560)
+        tw = dr.textlength(chip, font=ft)
+        dr.rounded_rectangle((px, y, px + tw + 32, y + 40), radius=20, outline=(62, 53, 44), width=2, fill=(21, 18, 15))
+        dr.text((px + 16, y + 10), chip, font=ft, fill=INK)
+        px += tw + 44
+    for line in title + sub:
+        f = font(68, 680) if line in title else font(25, 420)
+        assert x + dr.textlength(line, font=f) < cx - 236, (name, line)
+    bg.save(root / 'docs/img' / name, optimize=True)

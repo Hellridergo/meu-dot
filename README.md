@@ -1,21 +1,21 @@
 <p align="center">
-  <img src="docs/img/banner.png" alt="Meu Dot — your Dot, in your pocket" width="100%">
+  <img src="docs/img/banner.png" alt="Meu Dot — a Dot that runs in the palm of your hand" width="100%">
 </p>
 
 <p align="center">
   <a href="https://github.com/Hellridergo/meu-dot/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Hellridergo/meu-dot?color=F99D22&label=release"></a>
-  <img alt="Board" src="https://img.shields.io/badge/board-ESP32--S3%20AMOLED%201.75%22-1C1814">
-  <img alt="Android" src="https://img.shields.io/badge/Android-12%2B%20ARM64-1C1814">
-  <img alt="ESP-IDF" src="https://img.shields.io/badge/ESP--IDF-5.5.5-1C1814">
-  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/code-MIT-1C1814"></a>
-  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="LinkedIn" src="https://img.shields.io/badge/by-Leo%20Candido-0A66C2?logo=linkedin&logoColor=white"></a>
+  <img alt="Board: ESP32-S3 AMOLED 1.75&quot;" src="docs/img/badges/board.svg">
+  <img alt="Android 12+ ARM64" src="docs/img/badges/android.svg">
+  <img alt="ESP-IDF 5.5.5" src="docs/img/badges/esp-idf.svg">
+  <a href="LICENSE"><img alt="License: MIT" src="docs/img/badges/code-mit.svg"></a>
+  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="By Leo Candido on LinkedIn" src="docs/img/badges/by-leo-candido.svg"></a>
 </p>
 
 <p align="center">
   <b>English</b> · <a href="README.pt-BR.md">Português</a>
 </p>
 
-**Meu Dot** turns a round AMOLED board into a pocket companion for your **ChatGPT Dot**. Hold the character, speak, and let go. Your voice travels over Bluetooth to your phone, becomes text, and reaches your Dot conversation as an event. The Dot's answer comes back as a card on the round screen and is read aloud by the board's speaker, while the character's mouth moves with the voice.
+**Meu Dot** turns a round AMOLED board into a companion for your **ChatGPT Dot** that runs in the palm of your hand. Hold the character, speak, and let go. Your voice travels over Bluetooth to your phone, becomes text, and reaches your Dot conversation as an event. The Dot's answer comes back as a card on the round screen and is read aloud by the board's speaker, while the character's mouth moves with the voice.
 
 > [!NOTE]
 > Meu Dot is an independent hobby project. It is not affiliated with, endorsed by or sponsored by OpenAI or Waveshare. "ChatGPT" and "Dot" refer to the OpenAI services this project connects to.
@@ -30,7 +30,7 @@
 - **Fast round trip.** The board streams your voice while you speak, so the full recording reaches the phone about 15 ms after you release. Once the Dot has answered, its voice starts in under a second.
 - **Answers and decisions.** Long answers are split into pages. When the Dot asks for a decision, the board shows Confirm and Decline buttons, and your choice goes back to the same conversation.
 - **A character that reacts.** The amber Dot has 27 frames for blinking, looking around and talking, and its mouth follows the level of the reply audio.
-- **Made for the pocket.** The screen dims after 15 s and locks after 30 s; swipe up to unlock. A short PWR press turns the screen off, and holding PWR for 3 s powers the board off. The screen shows the battery level and charging state.
+- **Made to carry.** The screen dims after 15 s and locks after 30 s; swipe up to unlock. A short PWR press turns the screen off, and holding PWR for 3 s powers the board off. The screen shows the battery level and charging state.
 - **Your choice of voice.** Speech recognition runs either on the phone with Whisper (offline) or on Gemini. The reply can be read by the offline Android voice, Gemini TTS or Fish Audio. API keys are encrypted with the Android Keystore and never leave the phone except to the provider you picked.
 
 ## How it works
@@ -124,8 +124,8 @@ You can also try the round screen in the browser with the [interactive simulator
 Meu Dot is a project by **Leo Candido**. If you build your own, share it: I'd love to see it.
 
 <p>
-  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Leo%20Candido-0A66C2?logo=linkedin&logoColor=white"></a>
-  <a href="https://github.com/Hellridergo"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Hellridergo-1C1814?logo=github&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/leonardocandidosiqueira/"><img alt="Leo Candido on LinkedIn" src="docs/img/badges/linkedin.svg"></a>
+  <a href="https://github.com/Hellridergo"><img alt="Hellridergo on GitHub" src="docs/img/badges/github.svg"></a>
 </p>
 
 ## Credits
